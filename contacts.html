@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/icons/cropped-favicon-32x32.png" type="image/x-icon">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/stylesheet.css">
+</head>
+<body>
+    <header class="header-v2">
+        <nav class="navbar navbar-expand-lg pb-5 pb-lg-0">
+            <div class="header-content container-fluid">
+                <div class="navbar-brand logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 header-links d-flex justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Каталог товаров</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header-icons d-flex justify-content-between">
+                        <a href="#">
+                            <svg class="search-icon" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M34 33L26.2667 25.5083M30.4444 15.7778C30.4444 23.387 24.0769 29.5556 16.2222 29.5556C8.36751 29.5556 2 23.387 2 15.7778C2 8.16852 8.36751 2 16.2222 2C24.0769 2 30.4444 8.16852 30.4444 15.7778Z"/>
+                            </svg>                        
+                        </a>
+                        <a href="#">
+                            <svg class="shop-cart-icon" width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 2H8L12.02 21.7662C12.1572 22.4458 12.5329 23.0563 13.0813 23.4908C13.6298 23.9253 14.316 24.1561 15.02 24.1429H29.6C30.304 24.1561 30.9902 23.9253 31.5387 23.4908C32.0871 23.0563 32.4628 22.4458 32.6 21.7662L35 9.38095H9.5M15.5 31.5238C15.5 32.3391 14.8284 33 14 33C13.1716 33 12.5 32.3391 12.5 31.5238C12.5 30.7085 13.1716 30.0476 14 30.0476C14.8284 30.0476 15.5 30.7085 15.5 31.5238ZM32 31.5238C32 32.3391 31.3284 33 30.5 33C29.6716 33 29 32.3391 29 31.5238C29 30.7085 29.6716 30.0476 30.5 30.0476C31.3284 30.0476 32 30.7085 32 31.5238Z"/>
+                            </svg>    
+                        </a>
+        
+                        <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Добро пожаловать!</h2>
+                                                    <p>Уже есть аккаунт?</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Войти</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2>Регистрация</h2>
+                                                    <p>Зарегистрируйтесь на сайте, чтобы первым получать скидки и узнавать акционные предложения!</p>
+                                                    <form>
+                                                        <div class="modal-form">
+                                                            <input type="text" class="form-control" id="modal-reg-FIO" placeholder="Имя и фамилия">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-reg-email" placeholder="Email">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="tel" class="form-control" id="modal-reg-tel" placeholder="Телефон">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="password" class="form-control" id="modal-reg-password1" placeholder="Придумайте пароль">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit text-white w-100">Зарегистрироваться</button>
+                                                    </form>
+                                                    <div class="modal-hidden-row d-block d-md-none">
+                                                        <p>
+                                                            Уже есть аккаунт? 
+                                                            <button class="btn text-decoration-underline" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Войти</button> 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Регистрация</h2>
+                                                    <p>Получайте скидки первым!</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Зарегистрироваться</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2 class="modal-auth-h2">Войти в личный кабинет</h2>
+                                                    <form>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-auth-email" placeholder="Email">
+                                                        </div>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="password" class="form-control" id="modal-auth-password1" placeholder="Введите пароль">
+                                                        </div>
+        
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit2 text-white w-100">Войти</button>
+                                                        <div class="w-100 d-flex justify-content-between justify-content-md-end">
+                                                            <button class="btn d-block d-md-none text-decoration-underline modal-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Регистрация</button>
+                                                            <a class="btn text-decoration-underline modal-link" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Забыли пароль?</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle3" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Регистрация</h2>
+                                                    <p>Получайте скидки первым!</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Зарегистрироваться</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2 class="modal-reset-pswrd-h2">Забыли пароль?</h2>
+                                                    <p class="text-center w-100">Введите вашу почту и мы пришлем вам проверочный код на почту</p>
+                                                    <form>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-reset-password-email" placeholder="Email">
+                                                        </div>
+        
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit2 text-white w-100">Получить код</button>
+                                                        <div class="w-100 d-flex justify-content-center justify-content-md-end">
+                                                            <a class="btn text-decoration-underline modal-link" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Вернуться на страницу входа</a>
+                                                        </div>
+        
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                            <svg class="profile-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M31 34V30.4444C31 28.5585 30.2362 26.7497 28.8765 25.4161C27.5169 24.0825 25.6728 23.3333 23.75 23.3333H9.25C7.32718 23.3333 5.48311 24.0825 4.12348 25.4161C2.76384 26.7497 2 28.5585 2 30.4444V34M23.75 9.11111C23.75 13.0385 20.5041 16.2222 16.5 16.2222C12.4959 16.2222 9.25 13.0385 9.25 9.11111C9.25 5.18375 12.4959 2 16.5 2C20.5041 2 23.75 5.18375 23.75 9.11111Z"/>
+                            </svg> 
+                          </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contacts-headline">
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb contacts__breadcrumb">
+                        <li class="breadcrumb-item text-black"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item text-black active" aria-current="page">Контакты</li>
+                    </ol>
+                </nav>
+                <div class="row contacts-headline__btns">
+                    <div class="col-12 col-md-6 py-2 py-md-0">
+                        <a class="btn contacts__btn active w-100" href="#" aria-current="page">Контакты</a>
+                    </div>
+                    <div class="col-12 col-md-6 py-2 py-md-0">
+                        <a class="btn contacts__btn w-100" href="contacts2.html">Наши магазины</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-content">
+            <div class="container-fluid">
+                <div class="row flex-column flex-xl-row">
+                    <div class="col-xl-5 col-12 d-flex flex-column flex-md-row d-xl-block mb-5 mb-xl-0">
+                        <article class="contacts-acticle col-12 col-md-4 col-xl-12">
+                            <h3>Связаться с нами:</h3>
+                            <p>+7 (401) 237 53 43</p>
+                            <p>Import@kldrefine.com</p>
+                        </article>
+
+                        <article class="contacts-acticle col-12 col-md-4 col-xl-12">
+                            <h3>Юридический адрес:</h3>
+                            <p>
+                                Российская, Федерация, 238310, Калининградская область, Гурьевский район, поселок Васильково, улица Шатурская, дом 4А
+                            </p>
+                        </article>
+
+                        <article class="contacts-acticle col-12 col-md-4 col-xl-12">
+                            <h3>Адрес склада:</h3>
+                            <p>
+                                Московская область, Балашиха, Западная промзона, Шоссе энтузиастов 1
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-xl-7 contacts-map col-12">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3ab5172e3d98895d4fb5f3b5b07b8855308b13a81b7a7f2a403c93685858be0d&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="contacts__bg">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-v3">
+            <div class="mailing container-fluid d-flex">
+
+                <div class="mailing__col">
+                    <h2 class="size">Подписка на новости и рассылку</h2>
+                    <p>Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе
+                        новых поставок, скидок и эксклюзивных предложений.
+                    </p>
+                    <div class="mailing__input input-group">
+                        <input type="text" class="form-control" placeholder="Ваш email" aria-label="Ваш email" aria-describedby="mailing">
+                        <button class="btn btn-warning text-white" type="button" id="mailing">Подписаться</button>
+                    </div>
+                    <p class="mailing__warning">
+                        Нажимая на кнопку “Подписаться”, вы принимаете правила <a href="#">пользовательского соглашения</a>
+                    </p>
+                </div>
+                <div class="mailing__img">
+                </div>
+            </div>
+            
+    
+            <div class="footer-row container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header-links d-flex flex-column text-center flex-sm-row justify-content-center justify-content-sm-between">
+                    <a href="catalog.html">Каталог товаров</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Slick js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Custom Slick js -->
+    <script type="text/javascript" src="scripts/slick.js"></script>
+</body>
+</html>

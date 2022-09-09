@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Блог</title>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/icons/cropped-favicon-32x32.png" type="image/x-icon">
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        
+        <!-- Slick CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/stylesheet.css">
+    </head>
+<body>
+    <header class="header-v2">
+        <nav class="navbar navbar-expand-lg pb-5 pb-lg-0">
+            <div class="header-content container-fluid">
+                <div class="navbar-brand logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 header-links d-flex justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Каталог товаров</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="blog.html">Блог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header-icons d-flex justify-content-between">
+                        <a href="#">
+                            <svg class="search-icon" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M34 33L26.2667 25.5083M30.4444 15.7778C30.4444 23.387 24.0769 29.5556 16.2222 29.5556C8.36751 29.5556 2 23.387 2 15.7778C2 8.16852 8.36751 2 16.2222 2C24.0769 2 30.4444 8.16852 30.4444 15.7778Z"/>
+                            </svg>                        
+                        </a>
+                        <a href="#">
+                            <svg class="shop-cart-icon" width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 2H8L12.02 21.7662C12.1572 22.4458 12.5329 23.0563 13.0813 23.4908C13.6298 23.9253 14.316 24.1561 15.02 24.1429H29.6C30.304 24.1561 30.9902 23.9253 31.5387 23.4908C32.0871 23.0563 32.4628 22.4458 32.6 21.7662L35 9.38095H9.5M15.5 31.5238C15.5 32.3391 14.8284 33 14 33C13.1716 33 12.5 32.3391 12.5 31.5238C12.5 30.7085 13.1716 30.0476 14 30.0476C14.8284 30.0476 15.5 30.7085 15.5 31.5238ZM32 31.5238C32 32.3391 31.3284 33 30.5 33C29.6716 33 29 32.3391 29 31.5238C29 30.7085 29.6716 30.0476 30.5 30.0476C31.3284 30.0476 32 30.7085 32 31.5238Z"/>
+                            </svg>    
+                        </a>
+        
+                        <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Добро пожаловать!</h2>
+                                                    <p>Уже есть аккаунт?</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Войти</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2>Регистрация</h2>
+                                                    <p>Зарегистрируйтесь на сайте, чтобы первым получать скидки и узнавать акционные предложения!</p>
+                                                    <form>
+                                                        <div class="modal-form">
+                                                            <input type="text" class="form-control" id="modal-reg-FIO" placeholder="Имя и фамилия">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-reg-email" placeholder="Email">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="tel" class="form-control" id="modal-reg-tel" placeholder="Телефон">
+                                                        </div>
+                                                        <div class="modal-form">
+                                                            <input type="password" class="form-control" id="modal-reg-password1" placeholder="Придумайте пароль">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit text-white w-100">Зарегистрироваться</button>
+                                                    </form>
+                                                    <div class="modal-hidden-row d-block d-md-none">
+                                                        <p>
+                                                            Уже есть аккаунт? 
+                                                            <button class="btn text-decoration-underline" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Войти</button> 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Регистрация</h2>
+                                                    <p>Получайте скидки первым!</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Зарегистрироваться</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2 class="modal-auth-h2">Войти в личный кабинет</h2>
+                                                    <form>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-auth-email" placeholder="Email">
+                                                        </div>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="password" class="form-control" id="modal-auth-password1" placeholder="Введите пароль">
+                                                        </div>
+        
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit2 text-white w-100">Войти</button>
+                                                        <div class="w-100 d-flex justify-content-between justify-content-md-end">
+                                                            <button class="btn d-block d-md-none text-decoration-underline modal-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Регистрация</button>
+                                                            <a class="btn text-decoration-underline modal-link" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Забыли пароль?</a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle3" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+                                <div class="modal-content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="d-none d-md-block col-4 modal-col-left text-white d-flex flex-column align-content-between">
+                                                <div class="modal-coffee-img">
+                                                    <img src="img/modal-login-coffee.png" alt="coffee image">
+                                                </div>
+                                                <div class="modal-col-left__text text-center d-flex flex-column justify-content-center">
+                                                    <h2>Регистрация</h2>
+                                                    <p>Получайте скидки первым!</p>
+                                                </div>
+                                                <div class="modal-col-left__btn text-center d-flex align-items-end justify-content-center">
+                                                    <button class="btn btn-outline-light" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Зарегистрироваться</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-8 modal-col-right">
+                                                <button type="button" class="btn-close modal-btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                                                <div class="modal-col-right__content text-center">
+                                                    <div class="modal-logo text-center">
+                                                        <img src="img/modal-logo.png" alt="logo">
+                                                    </div>
+                                                    <h2 class="modal-reset-pswrd-h2">Забыли пароль?</h2>
+                                                    <p class="text-center w-100">Введите вашу почту и мы пришлем вам проверочный код на почту</p>
+                                                    <form>
+                                                        
+                                                        <div class="modal-form">
+                                                            <input type="email" class="form-control" id="modal-reset-password-email" placeholder="Email">
+                                                        </div>
+        
+                                                        <button type="submit" class="btn btn-warning modal-btn-sumbit2 text-white w-100">Получить код</button>
+                                                        <div class="w-100 d-flex justify-content-center justify-content-md-end">
+                                                            <a class="btn text-decoration-underline modal-link" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Вернуться на страницу входа</a>
+                                                        </div>
+        
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          <a data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                            <svg class="profile-icon" width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M31 34V30.4444C31 28.5585 30.2362 26.7497 28.8765 25.4161C27.5169 24.0825 25.6728 23.3333 23.75 23.3333H9.25C7.32718 23.3333 5.48311 24.0825 4.12348 25.4161C2.76384 26.7497 2 28.5585 2 30.4444V34M23.75 9.11111C23.75 13.0385 20.5041 16.2222 16.5 16.2222C12.4959 16.2222 9.25 13.0385 9.25 9.11111C9.25 5.18375 12.4959 2 16.5 2C20.5041 2 23.75 5.18375 23.75 9.11111Z"/>
+                            </svg> 
+                          </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb contacts__breadcrumb">
+                        <li class="breadcrumb-item text-black"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item text-black active" aria-current="page">Блог</li>
+                    </ol>
+                </nav>
+                <div class="row contacts-headline__btns">
+                    <div class="col-12 col-md-4 py-2 py-md-0">
+                        <a class="btn contacts__btn w-100" href="#learning-link">Обучение</a>
+                    </div>
+                    <div class="col-12 col-md-4 py-2 py-md-0">
+                        <a class="btn contacts__btn w-100" href="#blog-news-link">Новости</a>
+                    </div>
+                    <div class="col-12 col-md-4 py-2 py-md-0">
+                        <a class="btn contacts__btn w-100" href="#blog-qestions-link">Частые вопросы</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid making-coffee" id="blogCollapse">
+                <a name="learning-link"></a>
+                <h2 class="mb-5">Приготовление кофе разными способами</h2>
+                <div class="cooking-methods blog-study row flex-column flex-md-row">
+                    <div class="col-12 col-md-6 pb-4">
+                        <div class="row row-cols-2 row-cols-xxl-4 gy-4">
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-turka" aria-expanded="true" aria-controls="blog-turka" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Турка</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/turka-icon.png" alt="Турка">
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-frenchpress" aria-expanded="false" aria-controls="blog-frenchpress" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Френч-пресс</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/french-press-icon.png" alt="Френч-пресс">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-moka" aria-expanded="false" aria-controls="blog-moka" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Мока</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/moka-icon.png" alt="Мока">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-espresso" aria-expanded="false" aria-controls="blog-espresso" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Эспрессо</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/espresso-icon.png" alt="Эспрессо">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="row row-cols-2 row-cols-xxl-4 gy-4">
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-voronka" aria-expanded="false" aria-controls="blog-voronka" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Воронка</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/voronka-icon.png" alt="Воронка">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-aeropress" aria-expanded="false" aria-controls="blog-aeropress" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Аэропресс</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/aeropress-icon.png" alt="Аэропресс">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-chashka" aria-expanded="false" aria-controls="blog-chashka" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Чашка</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/cup-icon.png" alt="Чашка">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col">
+                                <div role="button" data-bs-toggle="collapse" data-bs-target="#blog-avtomat" aria-expanded="false" aria-controls="blog-avtomat" class="cooking-method btn cooking-method-btn d-flex flex-column align-items-center">
+                                    <div class="text-center">
+                                        <p>Автомат</p>
+                                        <div class="cooking-method__img">
+                                            <img class="img-fluid" src="img/catalog/catalog-categories/avtomat-icon.png" alt="Автомат">
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse show blog-collapse" data-bs-parent="#blogCollapse" id="blog-turka">
+                    <div class="card card-body">
+                        <h2>Как сварить кофе в турке:</h2>
+                        <article>
+                            <p>
+                                Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития.
+                            </p>
+                            <p>
+                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития.
+                            </p>
+                            <p>
+                                Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.
+                            </p>
+                        </article>
+                        <img class="img-fluid" src="img/blog/blog-img1.png" alt="image">
+                        <article>
+                            <h3>Название темы</h3>
+                            <p>
+                                Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития.
+                            </p>
+                            <p>
+                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития.
+                            </p>
+                            <p>
+                                Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.
+                            </p>
+                        </article>
+                        <img class="img-fluid" src="img/blog/blog-img2.png" alt="image">
+                        <article>
+                            <h3>Название темы</h3>
+                            <p>
+                                Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание модели развития.
+                            </p>
+                            <p>
+                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития.
+                            </p>
+                            <p>
+                                Товарищи! реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. С другой стороны реализация намеченных плановых заданий требуют от нас анализа существенных финансовых и административных условий.
+                            </p>
+                        </article>
+                        <img class="img-fluid" src="img/blog/blog-img3.png" alt="image">
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-frenchpress">
+                    <div class="card card-body">
+                        <h2>Френч-пресс</h2>
+                        <article>
+                            <p>
+                                Завариваем кофе в френч-прессе
+                            </p>
+                            <p>
+                                Френч-пресс – кухонный атрибут, который есть почти у каждого дома. Френч-пресс подходит для заваривания чая, трав и также может быть использован для приготовления прекрасного кофе в домашних условиях.
+                            </p>
+                            <p>
+                                Для приготовления кофе с помощью френч-пресса нам потребуется: свежий кофе марки Millor, жерновая кофемолка (чтобы сделать помол) и фильтрованная питьевая вода.
+                            </p>
+                            <p>
+                                Помол для приготовления кофе должен быть крупным (размером с сахарный песок или крупную морскую соль). Количество молотого кофе колеблется в зависимости от ваших вкусов и размеров френч-пресса. Выработанные нормы для приготовления кофе 60 гр. зерна на 1 литр воды. То есть на стандартный размер френч-пресса 350 мл. вам понадобится 21 грамм кофе. Для измерения советуем пользоваться либо мерной ложкой или весами.
+                            </p>
+                            <p>
+                                Для приготовления кофе потребуется фильтрованная вода с минерализацией от 50 до 150 г/л.. Воду надо будет подогреть до температуры 95℃. Это можно сделать специальным чайником с датчиком температуры. Наша компания использует кофейные чайники с длинным носиком и датчиком температуры. Если под рукой нет такого чайника, то вы можете использовать обычный чайник, вскипятив его и затем, открыв крышку дать ему постоять около минуты.
+                            </p>
+                            <p>
+                                Перед приготовлением кофе в френч-прессе лучше ополоснуть его горячей водой, чтобы температура воды, когда будем заливать кофе не понизилась за счет отдачи тепла на стенки френч-пресса.
+                            </p>
+                            <p>
+                                После того, как прогрели френч-пресс, засыпаем туда молотый кофе Millor и заливаем подготовленной водой. Слегка размешиваем и не опуская поршень оставляем готовиться от 5-8 мин. Точное время зависит от ваших вкусовых предпочтений.
+                            </p>
+                            <p>
+                                Когда прошло от 5-8 мин. плавно опускаем поршень, наливаем кофе в чашки, чтобы кофе не переэкстрагировался.
+                            </p>
+                            <p>
+                                Наслаждаемся вкусным кофе и не забываем после выпитой чашки кофе, помыть френч-пресс.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-moka">
+                    <div class="card card-body">
+                        <h2>Мока</h2>
+                        <article>
+                            <p>
+                                Подогрейте воду в чайнике, не доводя до кипения. Если заливать в основание холодную воду, то время приготовления сильно увеличивается, и такой кофе из гейзерной кофеварки может начать горчить, а также приобрести нежелательный металлический привкус. 
+                            </p>
+                            <p>
+                                Раскрутите моку и залейте горячую воду в основание до клапана безопасности, не выше.
+                            </p>
+                            <p>
+                                Клапан предназначен для стравливания давления, если вода не может пройти через сетчатый фильтр с кофе. Такое происходит, если, например, кофе смолот слишком мелко.
+                            </p>
+                            <p>
+                                Засыпьте кофе в фильтр до краев и установите на моку. 
+                            </p>
+                            <p>
+                                Аккуратно прикрутите основание к верхней части. 
+                            </p>
+                            <p>
+                                Поставьте моку на огонь и закройте крышку. 
+                            </p>
+                            <p>
+                                Через пару минут в основании моки образуется достаточное давление, чтобы вытеснить воду в верхнюю часть. Откройте крышку.
+                            </p>
+                            <p>
+                                Как только струйки кофе посветлеют и станут тонкими – снимите моку с плиты и подставьте основание под струю холодной воды , чтобы окончательно прервать экстракцию. Перелейте кофе в чашку.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-espresso">
+                    <div class="card card-body">
+                        <h2>Эспрессо-машина</h2>
+                        <article>
+                            <p>
+                                Все зависит от напитка который вы хотите приготовить.
+                            </p>
+                            <p>
+                                Закладка кофе для эспрессо настраивается под каждый сорт кофе отдельно. Из 18 грамм кофе приготовили 30 грамм эспрессо за время 28 сек.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-voronka">
+                    <div class="card card-body">
+                        <h2>Воронка</h2>
+                        <article>
+                            <p>
+                                Приготовления кофе в воронке занимает 3-5 минут. 
+                            </p>
+                            <p>
+                                Вам понадобится: воронка, фильтр, кофемолка, 27 г кофе и вода температурой 92-95°С. 
+                            </p>
+                            <p>
+                                Намалываем необходимое количество кофе. Помол должен быть крупный, больше сахара. Частицы размером с морскую соль. Если у вас нет весов — в столовой ложке «с горкой» примерно 9 г кофе. 
+                            </p>
+                            <p>
+                                Для приготовления 500 мл кофе в воронке понадобятся 3 столовые ложки молотого кофе «с горкой». 
+                            </p>
+                            <p>
+                                Ставим воронку на сервер или любую другую емкость, которая подойдет по объему и диаметру горлышка. Устанавливаем фильтр в воронку. Наливаем немного горячей воды, чтобы смочить фильтр и прогреть воронку с сервером – так заваривание будет «ровнее», а кофе не начнет мгновенно остывать, соприкоснувшись с холодными поверхностями. 
+                            </p>
+                            <p>
+                                Сливаем эту воду. Засыпаем весь объем кофе в воронку. Равномерно распределяем внутри. 
+                            </p>
+                            <p>
+                                Смачивая всю поверхность, круговыми движениями заливаем 50 мл воды и ждем, пока она пройдет через кофе. Ждем 30 секунд, доливаем еще 150 мл и снова делаем паузу на полминуты. Затем доливаем всю оставшуюся воду – еще 300 мл. Ожидаем, пока последние капли напитка пройдут через кофе. 
+                            </p>
+                            <p>
+                                Убираем фильтр и воронку. Взбалтываем сервер с готовым кофе. Наливаем в чашку.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-aeropress">
+                    <div class="card card-body">
+                        <h2>Аэропресс</h2>
+                        <article>
+                            <p>
+                                Помол для аэропресса — средний. Примерно как для пуровера. Оптимальная закладка кофе для аэропресса — 18 грамм. В отличие от других методов приготовления, в аэропрессе используют больше кофе по отношению к воде: около 70 грамм на 1 литр. Но это не значит, что нужно всегда использовать именно столько кофе. Мы рекомендуем относиться к этому, как к ориентиру и регулировать пропорции в зависимости от вкуса. 
+                            </p>
+                            <p>
+                                Оптимальная температура для приготовления кофе в аэропрессе — 90°С. Чтобы получить такую температуру, нужно вскипятить воду, а затем остудить её в течение полутора минут с открытой крышкой.
+                            </p>
+                            <p>
+                                Выбор температуры также зависит от степени обжарки кофе — чем темнее кофе, тем ниже нужна температура. А также от времени заваривания, чем меньше время заваривания, тем выше следует выбирать температуру заваривания. При этом изобретатель аэропресса рекомендует использовать воду с температурой 80°С. Однако, мало кто следует этой рекомендации и чаще всего используют воду с температурой 90°С. 
+                            </p>
+                            <p>
+                                Перед установкой сетки с бумажным фильтром в аэропресс нужно пролить через фильтр немного горячей воды, чтобы избавиться от возможного привкуса бумаги. 
+                            </p>
+                            <p>
+                                Затем нужно засыпать молотый кофе в аэропресс. Мы рекомендуем вливать воду в два этапа для более полной экстракции кофе. Сначала нужно влить треть от всего объёма воды по отношению кофе. То есть на 18 грамм кофе можно взять 50–60 мл воды и подождать 30 секунд. Затем залить оставшуюся воду. 
+                            </p>
+                            <p>
+                                Если общий объем воды равен 180 мл, то нужно влить остаток — 120–130 мл воды и установить поршень сверху на место, но сделать небольшое обратное вытягивающее движение, чтобы вода не протекала через фильтр вниз. В таком положении аэропресс нужно оставить на еще 40 секунд. После заваривания, нужно снять поршень, перемешать кофе, установить поршень обратно и с постоянным давлением плавно опускать его в течение 20–30 секунд. Не рекомендуется продавливать поршнем воду до самого конца, поскольку есть вероятность попадания в напиток большего количества мелких частиц, что приведет к продолжению экстракции напитка уже в чашке или сервировочном чайнике. 
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-chashka">
+                    <div class="card card-body">
+                        <h2>Чашка</h2>
+                        <article>
+                            <p>
+                                Заваривать кофе в кружке – это один из самых удобных и самых комфортабельных способов заварки кофе. Кружка – всегда под рукой, если найти кофемолку и кофе, то можно приготовить напиток идеального вкуса и пропорций.
+                            </p>
+                            <p>
+                                Для приготовления напитка нам понадобятся: свежеобжаренный кофе из интернет магазина Millor, кофемолка, чайник и чашка.
+                            </p>
+                            <p>
+                                Самое главное правило приготовления любого напитка – следовать инструкции. Для заваривания кофе она проста: засыпали кофе, залили, перемешали, дали настояться, повторно перемешали и наслаждаемся напитком. 
+                            </p>
+                            <p>
+                                Выбирая чашку для кофе обратите внимание на толщину стенок чашки и на высоту. Толщина стенок дольше сохранит тепло вашего напитка, высота не даст кофейной гуще помешать вам наслаждаться напитком. 
+                            </p>
+                            <p>
+                                Помол лучше делать свежеобжаренного кофе. Это позволить раскрыть более ярко все вкусовые характеристики заявленного сорта кофе. Степень помола для кружки – средняя. Желательно, чтобы частицы кофе были одинакового размера для равномерного заваривания напитка.
+                            </p>
+                            <p>
+                                Для приготовления 200 мл кофе нужно 12 гр. молотого кофе. Пропорция рассчитывается исходя из 60 гр. на 1000 мл.. Если под рукой нет весов, можно расчитать из чайных ложек. Обычно в  чайную ложку помещается 4 гр. молотого кофе с горкой. Значит нужно 3 чайных ложки. По вкусу можно повышать до 4. 
+                            </p>
+                            <p>
+                                Лучше для приготовления использовать бутылированную питную воду у которой ph будет около 7. Вода должна быть 93-95 ℃. Для получения нужной температуры в домашних условиях  дайте остыть чайнику после закипания 2 минуты. Заливаем кофе в кружку неприрывая струю, чтобы температура была однаковая. Затем перемешиваем кофе и оставляем завариваться 4-5 мин. Можно также предварительно прогреть чашку.
+                            </p>
+                            <p>
+                                Когда прошло 4 мин. еще раз актвино перемешиваем кофе, ждем пока частицы кофе осядут и начинаем пить. Если кружка осталась стоять долго, то кофе продолжит эксрагироваться, что придаст напитку сильную горечь. Многие предпочитают убирать всплывающие частицы кофе из напитка, чтобы они не попадали в рот. Крупные частицы, которые поднялись на поверхность лучше убрать кофе, уже перед употреблением кофе.
+                            </p>
+                            <p>
+                                Если предпочитаете кофе с сахаром или корицей, то лучше добавлять сахар и корицу на 4 мин. заваривания напитка, благодаря этому получится соввместить вкус кофе и необходимые добавки.
+                            </p>
+                            <p>
+                                Для снижения горечи купленного кофе, можно использовать кружку с широкими краями или положить в кофе пару косочков льда, чтобы охладить кофе и замедлить экстракцию.
+                            </p>
+                            <p>
+                                Существует много способов приготовления кофе в кружке. Эксперементируя с разными сортами Millor  вы можете выбрать свой уникальный способ заваривания кофе.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="collapse blog-collapse" data-bs-parent="#blogCollapse" id="blog-avtomat">
+                    <div class="card card-body">
+                        <h2>Автомат</h2>
+                        <article>
+                            <p>
+                                Приготовление кофе в автоматической кофемашине зависит от кофемашины и ее настроек. Нужно выбрать оптимальный помол.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <hr>
+            <div class="container-fluid blog-news">
+                <a name="blog-news-link"></a>
+                <h2>Новости:</h2>
+                <div class="news__card news__card1 d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid" src="img/news-image.png" alt="news-image">
+                    </div>
+                    <div class="news__card__text news__card1__text">
+                        <h3>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+                        <div class="news__card__text__p">
+                            <p>
+                                Танзания – красивая африканская страна.
+                                Именно здесь расположены легендарные
+                                географические объекты – вулкан
+                                Килиманджаро и озеро Виктория. 
+                                <br><br>
+                                Но наш интерес вызван не столько природными красотами, сколько кофе...
+                            </p>
+                        </div>
+                        <div class="blog-new__bottom-row d-flex flex-column flex-lg-row justify-content-between">
+                            <p>Автор статьи: Иван Иванов</p>
+                            <a href="#">
+                                Подробнее 
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5303 6.53033C13.8232 6.23744 13.8232 5.76256 13.5303 5.46967L8.75736 0.696699C8.46447 0.403806 7.98959 0.403806 7.6967 0.696699C7.40381 0.989593 7.40381 1.46447 7.6967 1.75736L11.9393 6L7.6967 10.2426C7.40381 10.5355 7.40381 11.0104 7.6967 11.3033C7.98959 11.5962 8.46447 11.5962 8.75736 11.3033L13.5303 6.53033ZM0 6.75H13V5.25H0V6.75Z" fill="#F9B300"/>
+                                </svg>                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__card news__card1 d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid" src="img/news-image.png" alt="news-image">
+                    </div>
+                    <div class="news__card__text news__card1__text">
+                        <h3>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+                        <div class="news__card__text__p">
+                            <p>
+                                Танзания – красивая африканская страна.
+                                Именно здесь расположены легендарные
+                                географические объекты – вулкан
+                                Килиманджаро и озеро Виктория. 
+                                <br><br>
+                                Но наш интерес вызван не столько природными красотами, сколько кофе...
+                            </p>
+                        </div>
+                        <div class="blog-new__bottom-row d-flex flex-column flex-lg-row justify-content-between">
+                            <p>Автор статьи: Иван Иванов</p>
+                            <a href="#">
+                                Подробнее 
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5303 6.53033C13.8232 6.23744 13.8232 5.76256 13.5303 5.46967L8.75736 0.696699C8.46447 0.403806 7.98959 0.403806 7.6967 0.696699C7.40381 0.989593 7.40381 1.46447 7.6967 1.75736L11.9393 6L7.6967 10.2426C7.40381 10.5355 7.40381 11.0104 7.6967 11.3033C7.98959 11.5962 8.46447 11.5962 8.75736 11.3033L13.5303 6.53033ZM0 6.75H13V5.25H0V6.75Z" fill="#F9B300"/>
+                                </svg>                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__card news__card1 d-flex justify-content-center justify-content-lg-between flex-column flex-lg-row">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-fluid" src="img/news-image.png" alt="news-image">
+                    </div>
+                    <div class="news__card__text news__card1__text">
+                        <h3>Танзанийский кофе. Откуда он взялся и почему мы его так любим?</h3>
+                        <div class="news__card__text__p">
+                            <p>
+                                Танзания – красивая африканская страна.
+                                Именно здесь расположены легендарные
+                                географические объекты – вулкан
+                                Килиманджаро и озеро Виктория. 
+                                <br><br>
+                                Но наш интерес вызван не столько природными красотами, сколько кофе...
+                            </p>
+                        </div>
+                        <div class="blog-new__bottom-row d-flex flex-column flex-lg-row justify-content-between">
+                            <p>Автор статьи: Иван Иванов</p>
+                            <a href="#">
+                                Подробнее 
+                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5303 6.53033C13.8232 6.23744 13.8232 5.76256 13.5303 5.46967L8.75736 0.696699C8.46447 0.403806 7.98959 0.403806 7.6967 0.696699C7.40381 0.989593 7.40381 1.46447 7.6967 1.75736L11.9393 6L7.6967 10.2426C7.40381 10.5355 7.40381 11.0104 7.6967 11.3033C7.98959 11.5962 8.46447 11.5962 8.75736 11.3033L13.5303 6.53033ZM0 6.75H13V5.25H0V6.75Z" fill="#F9B300"/>
+                                </svg>                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog__show-more">
+                    <a class="btn btn__show-more d-flex align-items-center justify-content-center" href="#">Показать еще</a>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section class="blog-questions">
+            <div class="blog-questions__bg1">
+                <div class="container-fluid">
+                    <a name="blog-qestions-link"></a>
+                    <h2>Частые вопросы:</h2>
+
+                    <div class="blog-questions__bg-coffee-img img-fluid row">
+                        <div class="col-5"></div>
+                        <div class="col-12 col-md-7">
+                            <div class="accordion" id="BlogQAaccordion">
+                                <div class="accordion-item QAaccordion-item">
+                                    <h2 class="accordion-header" id="blogHeadingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#blogCollapseOne" aria-expanded="true" aria-controls="blogCollapseOne">
+                                        Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?</button>
+                                    </h2>
+                                    <div id="blogCollapseOne" class="accordion-collapse collapse show" aria-labelledby="blogHeadingOne" data-bs-parent="#BlogQAaccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item QAaccordion-item">
+                                    <h2 class="accordion-header" id="BlogHeadingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blogCcollapseTwo" aria-expanded="false" aria-controls="blogCcollapseTwo">
+                                        Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?</button>
+                                    </h2>
+                                    <div id="blogCcollapseTwo" class="accordion-collapse collapse" aria-labelledby="BlogHeadingTwo" data-bs-parent="#BlogQAaccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item QAaccordion-item">
+                                    <h2 class="accordion-header" id="BlogHeadingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blogCcollapseThree" aria-expanded="false" aria-controls="blogCcollapseThree">
+                                        Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?</button>
+                                    </h2>
+                                    <div id="blogCcollapseThree" class="accordion-collapse collapse" aria-labelledby="BlogHeadingThree" data-bs-parent="#BlogQAaccordion">
+                                        <div class="accordion-body">
+                                          <p>
+                                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития
+                                          </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item QAaccordion-item">
+                                    <h2 class="accordion-header" id="BlogHeadingFour">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blogCcollapseFour" aria-expanded="false" aria-controls="blogCcollapseFour">
+                                        Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?</button>
+                                    </h2>
+                                    <div id="blogCcollapseFour" class="accordion-collapse collapse" aria-labelledby="BlogHeadingFour" data-bs-parent="#BlogQAaccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item QAaccordion-item">
+                                    <h2 class="accordion-header" id="BlogHeadingFive">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blogCcollapseFive" aria-expanded="false" aria-controls="blogCcollapseFive">
+                                        Чем вы отличаетесь от конкурентов? Почему мне стоит выбрать вас?</button>
+                                    </h2>
+                                    <div id="blogCcollapseFive" class="accordion-collapse collapse" aria-labelledby="BlogHeadingFive" data-bs-parent="#BlogQAaccordion">
+                                        <div class="accordion-body">
+                                            <p>
+                                                Задача организации, в особенности же рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Таким образом укрепление и развитие структуры способствует подготовки и реализации направлений прогрессивного развития
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main>
+    <footer>
+        <div class="footer-v4">
+            <div class="mailing container-fluid d-flex">
+
+                <div class="mailing__col">
+                    <h2>Подписка на новости и рассылку</h2>
+                    <p>Подпишитесь на нашу рассылку прямо сейчас и будьте в курсе
+                        новых поставок, скидок и эксклюзивных предложений.
+                    </p>
+                    <div class="mailing__input input-group">
+                        <input type="text" class="form-control" placeholder="Ваш email" aria-label="Ваш email" aria-describedby="mailing">
+                        <button class="btn btn-warning text-white" type="button" id="mailing">Подписаться</button>
+                    </div>
+                    <p class="mailing__warning">
+                        Нажимая на кнопку “Подписаться”, вы принимаете правила <a href="#">пользовательского соглашения</a>
+                    </p>
+                </div>
+                <div class="mailing__img">
+                </div>
+            </div>
+            
+    
+            <div class="footer-row container-fluid d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header-links d-flex flex-column text-center flex-sm-row justify-content-center justify-content-sm-between">
+                    <a href="catalog.html">Каталог товаров</a>
+                    <a href="blog.html">Блог</a>
+                    <a href="contacts.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Slick js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Custom Slick js -->
+    <script type="text/javascript" src="scripts/slick.js"></script>
+</body>
+</html>
